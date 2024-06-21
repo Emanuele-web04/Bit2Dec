@@ -11,7 +11,7 @@ import SwiftUI
 struct Bit2DecApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

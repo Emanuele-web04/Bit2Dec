@@ -8,17 +8,65 @@
 
 /* Begin PBXBuildFile section */
 		C005A3582C25DBCB00E5A181 /* Bit2DecApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005A3572C25DBCB00E5A181 /* Bit2DecApp.swift */; };
-		C005A35A2C25DBCB00E5A181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005A3592C25DBCB00E5A181 /* ContentView.swift */; };
+		C005A35A2C25DBCB00E5A181 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C005A3592C25DBCB00E5A181 /* MainView.swift */; };
 		C005A35C2C25DBCC00E5A181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C005A35B2C25DBCC00E5A181 /* Assets.xcassets */; };
 		C005A35F2C25DBCC00E5A181 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C005A35E2C25DBCC00E5A181 /* Preview Assets.xcassets */; };
+		C0D26E6D2C26225B005631E9 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D26E6C2C26225A005631E9 /* WidgetKit.framework */; };
+		C0D26E6F2C26225B005631E9 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D26E6E2C26225B005631E9 /* SwiftUI.framework */; };
+		C0D26E722C26225B005631E9 /* Bin2DecWidgetExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E712C26225B005631E9 /* Bin2DecWidgetExtensionBundle.swift */; };
+		C0D26E742C26225B005631E9 /* Bin2DecWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E732C26225B005631E9 /* Bin2DecWidgetExtension.swift */; };
+		C0D26E762C26225C005631E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D26E752C26225C005631E9 /* Assets.xcassets */; };
+		C0D26E7A2C26225C005631E9 /* Bin2DecWidgetExtensionExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C0D26E6A2C26225A005631E9 /* Bin2DecWidgetExtensionExtension.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C0D26E822C262427005631E9 /* ConversionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E812C262427005631E9 /* ConversionType.swift */; };
+		C0D26E832C262427005631E9 /* ConversionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E812C262427005631E9 /* ConversionType.swift */; };
+		C0D26E852C262A63005631E9 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E842C262A63005631E9 /* HapticFeedback.swift */; };
+		C0D26E862C262A63005631E9 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E842C262A63005631E9 /* HapticFeedback.swift */; };
+		C0D26E882C2630E0005631E9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E872C2630E0005631E9 /* ToastView.swift */; };
+		C0D26E892C2630E0005631E9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E872C2630E0005631E9 /* ToastView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0D26E782C26225C005631E9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C005A34C2C25DBCB00E5A181 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0D26E692C26225A005631E9;
+			remoteInfo = Bin2DecWidgetExtensionExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0D26E7B2C26225C005631E9 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C0D26E7A2C26225C005631E9 /* Bin2DecWidgetExtensionExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C005A3542C25DBCB00E5A181 /* Bit2Dec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bit2Dec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C005A3572C25DBCB00E5A181 /* Bit2DecApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bit2DecApp.swift; sourceTree = "<group>"; };
-		C005A3592C25DBCB00E5A181 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C005A3592C25DBCB00E5A181 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C005A35B2C25DBCC00E5A181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C005A35E2C25DBCC00E5A181 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C0D26E6A2C26225A005631E9 /* Bin2DecWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Bin2DecWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0D26E6C2C26225A005631E9 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		C0D26E6E2C26225B005631E9 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		C0D26E712C26225B005631E9 /* Bin2DecWidgetExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bin2DecWidgetExtensionBundle.swift; sourceTree = "<group>"; };
+		C0D26E732C26225B005631E9 /* Bin2DecWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bin2DecWidgetExtension.swift; sourceTree = "<group>"; };
+		C0D26E752C26225C005631E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C0D26E772C26225C005631E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0D26E7F2C262373005631E9 /* Bit2Dec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bit2Dec.entitlements; sourceTree = "<group>"; };
+		C0D26E802C2623A1005631E9 /* Bin2DecWidgetExtensionExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bin2DecWidgetExtensionExtension.entitlements; sourceTree = "<group>"; };
+		C0D26E812C262427005631E9 /* ConversionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionType.swift; sourceTree = "<group>"; };
+		C0D26E842C262A63005631E9 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
+		C0D26E872C2630E0005631E9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,13 +77,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0D26E672C26225A005631E9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D26E6F2C26225B005631E9 /* SwiftUI.framework in Frameworks */,
+				C0D26E6D2C26225B005631E9 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C005A34B2C25DBCB00E5A181 = {
 			isa = PBXGroup;
 			children = (
+				C0D26E802C2623A1005631E9 /* Bin2DecWidgetExtensionExtension.entitlements */,
 				C005A3562C25DBCB00E5A181 /* Bit2Dec */,
+				C0D26E702C26225B005631E9 /* Bin2DecWidgetExtension */,
+				C0D26E6B2C26225A005631E9 /* Frameworks */,
 				C005A3552C25DBCB00E5A181 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				C005A3542C25DBCB00E5A181 /* Bit2Dec.app */,
+				C0D26E6A2C26225A005631E9 /* Bin2DecWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,8 +112,12 @@
 		C005A3562C25DBCB00E5A181 /* Bit2Dec */ = {
 			isa = PBXGroup;
 			children = (
+				C0D26E7F2C262373005631E9 /* Bit2Dec.entitlements */,
 				C005A3572C25DBCB00E5A181 /* Bit2DecApp.swift */,
-				C005A3592C25DBCB00E5A181 /* ContentView.swift */,
+				C005A3592C25DBCB00E5A181 /* MainView.swift */,
+				C0D26E872C2630E0005631E9 /* ToastView.swift */,
+				C0D26E812C262427005631E9 /* ConversionType.swift */,
+				C0D26E842C262A63005631E9 /* HapticFeedback.swift */,
 				C005A35B2C25DBCC00E5A181 /* Assets.xcassets */,
 				C005A35D2C25DBCC00E5A181 /* Preview Content */,
 			);
@@ -67,6 +132,26 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C0D26E6B2C26225A005631E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0D26E6C2C26225A005631E9 /* WidgetKit.framework */,
+				C0D26E6E2C26225B005631E9 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C0D26E702C26225B005631E9 /* Bin2DecWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C0D26E712C26225B005631E9 /* Bin2DecWidgetExtensionBundle.swift */,
+				C0D26E732C26225B005631E9 /* Bin2DecWidgetExtension.swift */,
+				C0D26E752C26225C005631E9 /* Assets.xcassets */,
+				C0D26E772C26225C005631E9 /* Info.plist */,
+			);
+			path = Bin2DecWidgetExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +162,34 @@
 				C005A3502C25DBCB00E5A181 /* Sources */,
 				C005A3512C25DBCB00E5A181 /* Frameworks */,
 				C005A3522C25DBCB00E5A181 /* Resources */,
+				C0D26E7B2C26225C005631E9 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C0D26E792C26225C005631E9 /* PBXTargetDependency */,
 			);
 			name = Bit2Dec;
 			productName = Bit2Dec;
 			productReference = C005A3542C25DBCB00E5A181 /* Bit2Dec.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C0D26E692C26225A005631E9 /* Bin2DecWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0D26E7E2C26225C005631E9 /* Build configuration list for PBXNativeTarget "Bin2DecWidgetExtensionExtension" */;
+			buildPhases = (
+				C0D26E662C26225A005631E9 /* Sources */,
+				C0D26E672C26225A005631E9 /* Frameworks */,
+				C0D26E682C26225A005631E9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bin2DecWidgetExtensionExtension;
+			productName = Bin2DecWidgetExtensionExtension;
+			productReference = C0D26E6A2C26225A005631E9 /* Bin2DecWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +202,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					C005A3532C25DBCB00E5A181 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					C0D26E692C26225A005631E9 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -116,6 +223,7 @@
 			projectRoot = "";
 			targets = (
 				C005A3532C25DBCB00E5A181 /* Bit2Dec */,
+				C0D26E692C26225A005631E9 /* Bin2DecWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +238,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0D26E682C26225A005631E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D26E762C26225C005631E9 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +253,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C005A35A2C25DBCB00E5A181 /* ContentView.swift in Sources */,
+				C005A35A2C25DBCB00E5A181 /* MainView.swift in Sources */,
+				C0D26E852C262A63005631E9 /* HapticFeedback.swift in Sources */,
 				C005A3582C25DBCB00E5A181 /* Bit2DecApp.swift in Sources */,
+				C0D26E822C262427005631E9 /* ConversionType.swift in Sources */,
+				C0D26E882C2630E0005631E9 /* ToastView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0D26E662C26225A005631E9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0D26E722C26225B005631E9 /* Bin2DecWidgetExtensionBundle.swift in Sources */,
+				C0D26E862C262A63005631E9 /* HapticFeedback.swift in Sources */,
+				C0D26E742C26225B005631E9 /* Bin2DecWidgetExtension.swift in Sources */,
+				C0D26E832C262427005631E9 /* ConversionType.swift in Sources */,
+				C0D26E892C2630E0005631E9 /* ToastView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0D26E792C26225C005631E9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			platformFilter = ios;
+			target = C0D26E692C26225A005631E9 /* Bin2DecWidgetExtensionExtension */;
+			targetProxy = C0D26E782C26225C005631E9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		C005A3602C25DBCC00E5A181 /* Debug */ = {
@@ -267,14 +407,18 @@
 		C005A3632C25DBCC00E5A181 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bit2Dec/Bit2Dec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bit2Dec/Preview Content\"";
 				DEVELOPMENT_TEAM = HR24WHR326;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Bit2Dec;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -287,23 +431,31 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emanueledipietro.Bit2Dec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		C005A3642C25DBCC00E5A181 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Bit2Dec/Bit2Dec.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bit2Dec/Preview Content\"";
 				DEVELOPMENT_TEAM = HR24WHR326;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Bit2Dec;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,9 +468,77 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.emanueledipietro.Bit2Dec;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		C0D26E7C2C26225C005631E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Bin2DecWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HR24WHR326;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bin2DecWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bin2DecWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emanueledipietro.Bit2Dec.Bin2DecWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		C0D26E7D2C26225C005631E9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Bin2DecWidgetExtensionExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HR24WHR326;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Bin2DecWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Bin2DecWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.emanueledipietro.Bit2Dec.Bin2DecWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +559,15 @@
 			buildConfigurations = (
 				C005A3632C25DBCC00E5A181 /* Debug */,
 				C005A3642C25DBCC00E5A181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0D26E7E2C26225C005631E9 /* Build configuration list for PBXNativeTarget "Bin2DecWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0D26E7C2C26225C005631E9 /* Debug */,
+				C0D26E7D2C26225C005631E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
