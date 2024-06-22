@@ -56,6 +56,10 @@ struct Bin2DecWidgetExtensionEntryView : View {
                     Text("From Decimal").textStyleWidget()
                     Image(systemName: "arrow.down")
                     Text("To Binary").textStyleWidget()
+                case .dec2hex:
+                    Text("From Decimal").textStyleWidget()
+                    Image(systemName: "arrow.down")
+                    Text("To Hex").textStyleWidget()
                 case .none:
                     Text("")
                 }
