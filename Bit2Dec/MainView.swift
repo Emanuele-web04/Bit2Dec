@@ -1,5 +1,7 @@
 import SwiftUI
 import WidgetKit
+import AppKit
+
 enum FocusableField: Hashable {
     case dec
     case bit
@@ -63,9 +65,9 @@ struct MainView: View {
     @Environment(\.colorScheme) var colorScheme
     @FocusState var isFocused: FocusableField?
     
-    #if os(iOS)
+#if os(iOS)
     private var pasteboard = UIPasteboard.general
-    #endif
+#endif
     
     private var bitString: String {
         outcome.reversed()
@@ -182,6 +184,9 @@ struct MainView: View {
                                         Spacer()
                                         button(from: "#\(hexString)")
                                     }
+#if os(macOS)
+                                    
+#endif
                                     
 #if os(iOS)
                                     .padding()
@@ -195,7 +200,20 @@ struct MainView: View {
                         }
                         Spacer()
                         if conversionType == .dec2hex && isTapped {
-                            RoundedRectangle(cornerRadius: 15).stroke(Color.cyan, lineWidth: 4.0).fill(Color(hex: hexString)).frame(width: 70, height: 70)
+                            Button {
+#if os(iOS)
+                                HapticFeedback.shared.triggerImpactFeedback(.light)
+                                
+                                pasteboard.string = hexString
+#else
+                                copyToClipboard("#" + hexString)
+#endif
+                                withAnimation {
+                                    showToast = true
+                                }
+                            } label: {
+                                RoundedRectangle(cornerRadius: 15).stroke(Color.cyan, lineWidth: 4.0).fill(Color(hex: hexString)).frame(width: 70, height: 70)
+                            }.buttonStyle(.plain)
                         }
                         Spacer()
                     }
@@ -284,7 +302,7 @@ struct MainView: View {
         Button {
 #if os(iOS)
             HapticFeedback.shared.triggerImpactFeedback()
-            #endif
+#endif
             action()
             isTapped = true
         } label: {
@@ -294,9 +312,9 @@ struct MainView: View {
                 .padding(.horizontal, 21).padding(.vertical, 15)
                 .background((decNumber == 0 && bitNumber == 0) ? Color.secondary : Color.primary)
                 .cornerRadius(150)
-            #else
+#else
                 .foregroundStyle(.white)
-            #endif
+#endif
         }.padding()
     }
     
@@ -306,7 +324,9 @@ struct MainView: View {
             HapticFeedback.shared.triggerImpactFeedback(.light)
             
             pasteboard.string = string
-            #endif
+#else
+            copyToClipboard(string)
+#endif
             withAnimation {
                 showToast = true
             }
@@ -316,9 +336,16 @@ struct MainView: View {
                 .background {
                     RoundedRectangle(cornerRadius: 8).fill(.cyan)
                 }
-            #endif
+#endif
         }
     }
+    
+    func copyToClipboard(_ string: String) {
+        let pasteboard = NSPasteboard.general
+        pasteboard.declareTypes([.string], owner: nil)
+        pasteboard.setString(string, forType: .string)
+    }
+    
     
     func convertDec2Bit() {
         var temp = decNumber

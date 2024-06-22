@@ -23,6 +23,7 @@
 		C0D26E862C262A63005631E9 /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E842C262A63005631E9 /* HapticFeedback.swift */; };
 		C0D26E882C2630E0005631E9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E872C2630E0005631E9 /* ToastView.swift */; };
 		C0D26E892C2630E0005631E9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E872C2630E0005631E9 /* ToastView.swift */; };
+		C0D26E8D2C26534A005631E9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D26E8C2C26534A005631E9 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C0D26E812C262427005631E9 /* ConversionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionType.swift; sourceTree = "<group>"; };
 		C0D26E842C262A63005631E9 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		C0D26E872C2630E0005631E9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		C0D26E8C2C26534A005631E9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D26E8D2C26534A005631E9 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +138,7 @@
 		C0D26E6B2C26225A005631E9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0D26E8C2C26534A005631E9 /* StoreKit.framework */,
 				C0D26E6C2C26225A005631E9 /* WidgetKit.framework */,
 				C0D26E6E2C26225B005631E9 /* SwiftUI.framework */,
 			);
@@ -420,7 +424,7 @@
 				DEVELOPMENT_TEAM = HR24WHR326;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Bit2Dec;
+				INFOPLIST_KEY_CFBundleDisplayName = MagicDec;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -461,7 +465,7 @@
 				DEVELOPMENT_TEAM = HR24WHR326;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = Bit2Dec;
+				INFOPLIST_KEY_CFBundleDisplayName = MagicDec;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
