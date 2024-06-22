@@ -33,6 +33,8 @@
 		C0D26E9A2C26618D005631E9 /* OptionsTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E992C26618D005631E9 /* OptionsTipsView.swift */; };
 		C0D26E9C2C2661AF005631E9 /* TipItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E9B2C2661AF005631E9 /* TipItemView.swift */; };
 		C0D26E9E2C26EF6D005631E9 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E9D2C26EF6D005631E9 /* ThanksView.swift */; };
+		C0D572D52C276245004628BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D572D42C276245004628BA /* Extensions.swift */; };
+		C0D572D62C2762F6004628BA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D572D42C276245004628BA /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 		C0D26E992C26618D005631E9 /* OptionsTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTipsView.swift; sourceTree = "<group>"; };
 		C0D26E9B2C2661AF005631E9 /* TipItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipItemView.swift; sourceTree = "<group>"; };
 		C0D26E9D2C26EF6D005631E9 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
+		C0D572D42C276245004628BA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,7 @@
 				C005A3572C25DBCB00E5A181 /* Bit2DecApp.swift */,
 				C0D26E842C262A63005631E9 /* HapticFeedback.swift */,
 				C005A3592C25DBCB00E5A181 /* MainView.swift */,
+				C0D572D42C276245004628BA /* Extensions.swift */,
 				C0D26E872C2630E0005631E9 /* ToastView.swift */,
 				C0D26E812C262427005631E9 /* ConversionType.swift */,
 				C0D26E9F2C272B2C005631E9 /* StoreKit */,
@@ -299,6 +303,7 @@
 				C0D26E9C2C2661AF005631E9 /* TipItemView.swift in Sources */,
 				C0D26E9A2C26618D005631E9 /* OptionsTipsView.swift in Sources */,
 				C005A3582C25DBCB00E5A181 /* Bit2DecApp.swift in Sources */,
+				C0D572D52C276245004628BA /* Extensions.swift in Sources */,
 				C0D26E982C2660DF005631E9 /* TipsView.swift in Sources */,
 				C0D26E822C262427005631E9 /* ConversionType.swift in Sources */,
 				C0D26E882C2630E0005631E9 /* ToastView.swift in Sources */,
@@ -316,6 +321,7 @@
 				C0D26E742C26225B005631E9 /* Bin2DecWidgetExtension.swift in Sources */,
 				C0D26E832C262427005631E9 /* ConversionType.swift in Sources */,
 				C0D26E892C2630E0005631E9 /* ToastView.swift in Sources */,
+				C0D572D62C2762F6004628BA /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

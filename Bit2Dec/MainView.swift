@@ -9,52 +9,6 @@ enum FocusableField: Hashable {
     case bit
 }
 
-extension Color {
-    init(hex: String) {
-        let hex = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
-        var int: UInt64 = 0
-        Scanner(string: hex).scanHexInt64(&int)
-        let a, r, g, b: UInt64
-        switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
-        default:
-            (a, r, g, b) = (1, 1, 1, 0) // default to clear
-        }
-        
-        self.init(
-            .sRGB,
-            red: Double(r) / 255,
-            green: Double(g) / 255,
-            blue: Double(b) / 255,
-            opacity: Double(a) / 255
-        )
-    }
-}
-
-
-extension String {
-    subscript (i: Int) -> Character {
-        return self[index(startIndex, offsetBy: i)]
-    }
-}
-
-extension StringProtocol  {
-    var digits: [Int] { compactMap(\.wholeNumberValue) }
-}
-
-extension LosslessStringConvertible {
-    var string: String { .init(self) }
-}
-
-extension Numeric where Self: LosslessStringConvertible {
-    var digits: [Int] { string.digits }
-}
-
 struct MainView: View {
     @State var decNumber = 0
     @State var bitNumber = 0
@@ -66,6 +20,8 @@ struct MainView: View {
     
     @Environment(\.colorScheme) var colorScheme
     @FocusState var isFocused: FocusableField?
+    
+    @State var resultASCII: String?
     
 #if os(iOS)
     private var pasteboard = UIPasteboard.general
@@ -177,12 +133,12 @@ struct MainView: View {
                                     Spacer()
                                     randomButton
                                 }
-                                #if os(iOS)
+#if os(iOS)
                                 .padding()
-                                    .background {
-                                        RoundedRectangle(cornerRadius: 15.0).fill(Color.clear)
-                                            .stroke(.primary, lineWidth: 1)
-                                    }
+                                .background {
+                                    RoundedRectangle(cornerRadius: 15.0).fill(Color.clear)
+                                        .stroke(.primary, lineWidth: 1)
+                                }
 #endif
                                 
                                 if isTapped {
@@ -202,6 +158,20 @@ struct MainView: View {
 #endif
                                 }
                             }
+                        case .dec2ASCII:
+                            TextField("Enter Dec", value: $decNumber, formatter: NumberFormatter())
+#if os(iOS)
+                            
+                                .keyboardType(.numberPad).font(.title3)
+                                .focused($isFocused, equals: .dec)
+#endif
+#if os(iOS)
+                                .padding()
+                                .background {
+                                    RoundedRectangle(cornerRadius: 15.0).fill(Color.clear)
+                                        .stroke(.primary, lineWidth: 1)
+                                }
+#endif
                         }
                         Spacer()
                         if conversionType == .dec2hex && isTapped {
@@ -218,6 +188,24 @@ struct MainView: View {
                                 }
                             } label: {
                                 RoundedRectangle(cornerRadius: 15).stroke(Color.cyan, lineWidth: 4.0).fill(Color(hex: hexString)).frame(width: 70, height: 70)
+                            }.buttonStyle(.plain)
+                        } else if conversionType == .dec2ASCII && isTapped {
+                            Button {
+#if os(iOS)
+                                HapticFeedback.shared.triggerImpactFeedback(.light)
+                                
+                                pasteboard.string = resultASCII
+#else
+                                copyToClipboard(resultASCII ?? "No value found")
+#endif
+                                withAnimation {
+                                    showToast = true
+                                }
+                            } label: {
+                                Text(resultASCII ?? "Not found").font(.title).bold().padding().foregroundStyle(.black)
+                                    .background {
+                                        RoundedRectangle(cornerRadius: 5).fill(Color.cyan)
+                                    }
                             }.buttonStyle(.plain)
                         }
                         Spacer()
@@ -243,6 +231,7 @@ struct MainView: View {
                         decNumber = 0
                         bitNumber = 0
                         isTapped = false
+                        resultASCII = nil
                         outcome = []
                         WidgetCenter.shared.reloadAllTimelines()
                     }
@@ -257,6 +246,8 @@ struct MainView: View {
                                 convertDec2Bit()
                             case .dec2hex:
                                 convertDec2Hex()
+                            case .dec2ASCII:
+                                convertToASCII(from: decNumber)
                             }
                         }.disabled(decNumber == 0 && bitNumber == 0)
                             .disabled(decNumber > 16777215)
@@ -269,6 +260,7 @@ struct MainView: View {
                                 outcome = []
                                 isTapped = false
                                 isFocused = nil
+                                resultASCII = nil
 #if os(iOS)
                                 HapticFeedback.shared.triggerImpactFeedback()
 #endif
@@ -313,9 +305,9 @@ struct MainView: View {
     private var randomButton: some View {
         Button {
             generateRandomDec()
-            #if os(iOS)
+#if os(iOS)
             HapticFeedback.shared.triggerImpactFeedback(.soft)
-            #endif
+#endif
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 convertDec2Hex()
                 isTapped = true
@@ -329,6 +321,11 @@ struct MainView: View {
                 }
 #endif
         }
+    }
+    
+    func convertToASCII(from number: Int) {
+        let converted = String(unicodeCodepoint: number) ?? "Not found"
+        resultASCII = converted
     }
     
     func conversionButton(_ action: @escaping () -> Void) -> some View {
@@ -374,7 +371,7 @@ struct MainView: View {
         }
     }
     
-    #if os(macOS)
+#if os(macOS)
     func copyToClipboard(_ string: String) {
         let pasteboard = NSPasteboard.general
         pasteboard.declareTypes([.string], owner: nil)

@@ -10,6 +10,7 @@ enum ConversionType: String, Identifiable, CaseIterable {
     case bit2dec = "Binary 2 Decimal"
     case dec2Bit = "Decimal 2 Binary"
     case dec2hex = "Decimal 2 Hex"
+    case dec2ASCII = "Decimal 2 ASCII"
     
     var id: Self { return self }
 }
