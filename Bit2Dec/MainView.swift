@@ -72,7 +72,7 @@ struct MainView: View {
 #endif
     
     private var bitString: String {
-        outcome.reversed()
+        outcome
             .map { String($0) }
             .joined()
     }
