@@ -1,6 +1,8 @@
 import SwiftUI
 import WidgetKit
+#if os(macOS)
 import AppKit
+#endif
 
 enum FocusableField: Hashable {
     case dec
@@ -165,12 +167,18 @@ struct MainView: View {
                         case .dec2hex:
                             VStack(alignment: .leading) {
                                 Text("Decimal Value").font(.caption)
-                                TextField("Enter Dec", value: $decNumber, formatter: NumberFormatter())
+                                HStack {
+                                    TextField("Enter Dec", value: $decNumber, formatter: NumberFormatter())
 #if os(iOS)
-                                
-                                    .keyboardType(.numberPad).padding().font(.title3)
-                                    .focused($isFocused, equals: .dec)
-                                
+                                    
+                                        .keyboardType(.numberPad).font(.title3)
+                                        .focused($isFocused, equals: .dec)
+#endif
+                                    Spacer()
+                                    randomButton
+                                }
+                                #if os(iOS)
+                                .padding()
                                     .background {
                                         RoundedRectangle(cornerRadius: 15.0).fill(Color.clear)
                                             .stroke(.primary, lineWidth: 1)
@@ -184,9 +192,6 @@ struct MainView: View {
                                         Spacer()
                                         button(from: "#\(hexString)")
                                     }
-#if os(macOS)
-                                    
-#endif
                                     
 #if os(iOS)
                                     .padding()
@@ -204,7 +209,7 @@ struct MainView: View {
 #if os(iOS)
                                 HapticFeedback.shared.triggerImpactFeedback(.light)
                                 
-                                pasteboard.string = hexString
+                                pasteboard.string = ("#" + hexString)
 #else
                                 copyToClipboard("#" + hexString)
 #endif
@@ -253,7 +258,8 @@ struct MainView: View {
                             case .dec2hex:
                                 convertDec2Hex()
                             }
-                        }.disabled((decNumber == 0 && bitNumber == 0) || decNumber > 16777215)
+                        }.disabled(decNumber == 0 && bitNumber == 0)
+                            .disabled(decNumber > 16777215)
                         
                         if isTapped {
                             Spacer()
@@ -262,6 +268,7 @@ struct MainView: View {
                                 bitNumber = 0
                                 outcome = []
                                 isTapped = false
+                                isFocused = nil
 #if os(iOS)
                                 HapticFeedback.shared.triggerImpactFeedback()
 #endif
@@ -298,6 +305,32 @@ struct MainView: View {
         }
     }
     
+    func generateRandomDec() {
+        let random = Int.random(in: 0...16777215)
+        decNumber = random
+    }
+    
+    private var randomButton: some View {
+        Button {
+            generateRandomDec()
+            #if os(iOS)
+            HapticFeedback.shared.triggerImpactFeedback(.soft)
+            #endif
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                convertDec2Hex()
+                isTapped = true
+                isFocused = nil
+            }
+        } label: {
+            Image(systemName: "shuffle").foregroundStyle(.cyan).padding(5)
+#if os(iOS)
+                .background {
+                    RoundedRectangle(cornerRadius: 8).fill(.black)
+                }
+#endif
+        }
+    }
+    
     func conversionButton(_ action: @escaping () -> Void) -> some View {
         Button {
 #if os(iOS)
@@ -305,12 +338,13 @@ struct MainView: View {
 #endif
             action()
             isTapped = true
+            isFocused = nil
         } label: {
-            Label("Convert", systemImage: "arrow.up.arrow.down.circle.fill")
+            Label(decNumber > 16777215 ? "Number out of range" : "Convert", systemImage: "arrow.up.arrow.down.circle.fill")
 #if os(iOS)
                 .foregroundStyle(colorScheme == .dark ? .black : .white)
                 .padding(.horizontal, 21).padding(.vertical, 15)
-                .background((decNumber == 0 && bitNumber == 0) ? Color.secondary : Color.primary)
+                .background(((decNumber == 0 && bitNumber == 0) || decNumber > 16777215) ? Color.secondary : Color.primary)
                 .cornerRadius(150)
 #else
                 .foregroundStyle(.white)
@@ -340,11 +374,12 @@ struct MainView: View {
         }
     }
     
+    #if os(macOS)
     func copyToClipboard(_ string: String) {
         let pasteboard = NSPasteboard.general
         pasteboard.declareTypes([.string], owner: nil)
         pasteboard.setString(string, forType: .string)
-    }
+    }#endif
     
     
     func convertDec2Bit() {

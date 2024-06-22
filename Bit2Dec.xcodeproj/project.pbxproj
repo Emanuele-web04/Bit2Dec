@@ -24,6 +24,15 @@
 		C0D26E882C2630E0005631E9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E872C2630E0005631E9 /* ToastView.swift */; };
 		C0D26E892C2630E0005631E9 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E872C2630E0005631E9 /* ToastView.swift */; };
 		C0D26E8D2C26534A005631E9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D26E8C2C26534A005631E9 /* StoreKit.framework */; };
+		C0D26E8F2C2659A5005631E9 /* MyTipsStorKitConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = C0D26E8E2C2659A5005631E9 /* MyTipsStorKitConfiguration.storekit */; };
+		C0D26E912C265C1E005631E9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E902C265C1E005631E9 /* TestView.swift */; };
+		C0D26E922C265C1E005631E9 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E902C265C1E005631E9 /* TestView.swift */; };
+		C0D26E942C265EA4005631E9 /* MyProductsIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E932C265EA4005631E9 /* MyProductsIdentifier.swift */; };
+		C0D26E962C265F14005631E9 /* TipStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E952C265F14005631E9 /* TipStore.swift */; };
+		C0D26E982C2660DF005631E9 /* TipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E972C2660DF005631E9 /* TipsView.swift */; };
+		C0D26E9A2C26618D005631E9 /* OptionsTipsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E992C26618D005631E9 /* OptionsTipsView.swift */; };
+		C0D26E9C2C2661AF005631E9 /* TipItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E9B2C2661AF005631E9 /* TipItemView.swift */; };
+		C0D26E9E2C26EF6D005631E9 /* ThanksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D26E9D2C26EF6D005631E9 /* ThanksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +78,14 @@
 		C0D26E842C262A63005631E9 /* HapticFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
 		C0D26E872C2630E0005631E9 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		C0D26E8C2C26534A005631E9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C0D26E8E2C2659A5005631E9 /* MyTipsStorKitConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = MyTipsStorKitConfiguration.storekit; sourceTree = "<group>"; };
+		C0D26E902C265C1E005631E9 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		C0D26E932C265EA4005631E9 /* MyProductsIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProductsIdentifier.swift; sourceTree = "<group>"; };
+		C0D26E952C265F14005631E9 /* TipStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipStore.swift; sourceTree = "<group>"; };
+		C0D26E972C2660DF005631E9 /* TipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsView.swift; sourceTree = "<group>"; };
+		C0D26E992C26618D005631E9 /* OptionsTipsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTipsView.swift; sourceTree = "<group>"; };
+		C0D26E9B2C2661AF005631E9 /* TipItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipItemView.swift; sourceTree = "<group>"; };
+		C0D26E9D2C26EF6D005631E9 /* ThanksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThanksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,10 +134,11 @@
 			children = (
 				C0D26E7F2C262373005631E9 /* Bit2Dec.entitlements */,
 				C005A3572C25DBCB00E5A181 /* Bit2DecApp.swift */,
+				C0D26E842C262A63005631E9 /* HapticFeedback.swift */,
 				C005A3592C25DBCB00E5A181 /* MainView.swift */,
 				C0D26E872C2630E0005631E9 /* ToastView.swift */,
 				C0D26E812C262427005631E9 /* ConversionType.swift */,
-				C0D26E842C262A63005631E9 /* HapticFeedback.swift */,
+				C0D26E9F2C272B2C005631E9 /* StoreKit */,
 				C005A35B2C25DBCC00E5A181 /* Assets.xcassets */,
 				C005A35D2C25DBCC00E5A181 /* Preview Content */,
 			);
@@ -154,6 +172,21 @@
 				C0D26E772C26225C005631E9 /* Info.plist */,
 			);
 			path = Bin2DecWidgetExtension;
+			sourceTree = "<group>";
+		};
+		C0D26E9F2C272B2C005631E9 /* StoreKit */ = {
+			isa = PBXGroup;
+			children = (
+				C0D26E8E2C2659A5005631E9 /* MyTipsStorKitConfiguration.storekit */,
+				C0D26E902C265C1E005631E9 /* TestView.swift */,
+				C0D26E932C265EA4005631E9 /* MyProductsIdentifier.swift */,
+				C0D26E952C265F14005631E9 /* TipStore.swift */,
+				C0D26E972C2660DF005631E9 /* TipsView.swift */,
+				C0D26E9D2C26EF6D005631E9 /* ThanksView.swift */,
+				C0D26E992C26618D005631E9 /* OptionsTipsView.swift */,
+				C0D26E9B2C2661AF005631E9 /* TipItemView.swift */,
+			);
+			path = StoreKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D26E8F2C2659A5005631E9 /* MyTipsStorKitConfiguration.storekit in Resources */,
 				C005A35F2C25DBCC00E5A181 /* Preview Assets.xcassets in Resources */,
 				C005A35C2C25DBCC00E5A181 /* Assets.xcassets in Resources */,
 			);
@@ -257,11 +291,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D26E942C265EA4005631E9 /* MyProductsIdentifier.swift in Sources */,
+				C0D26E912C265C1E005631E9 /* TestView.swift in Sources */,
 				C005A35A2C25DBCB00E5A181 /* MainView.swift in Sources */,
+				C0D26E962C265F14005631E9 /* TipStore.swift in Sources */,
 				C0D26E852C262A63005631E9 /* HapticFeedback.swift in Sources */,
+				C0D26E9C2C2661AF005631E9 /* TipItemView.swift in Sources */,
+				C0D26E9A2C26618D005631E9 /* OptionsTipsView.swift in Sources */,
 				C005A3582C25DBCB00E5A181 /* Bit2DecApp.swift in Sources */,
+				C0D26E982C2660DF005631E9 /* TipsView.swift in Sources */,
 				C0D26E822C262427005631E9 /* ConversionType.swift in Sources */,
 				C0D26E882C2630E0005631E9 /* ToastView.swift in Sources */,
+				C0D26E9E2C26EF6D005631E9 /* ThanksView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D26E922C265C1E005631E9 /* TestView.swift in Sources */,
 				C0D26E722C26225B005631E9 /* Bin2DecWidgetExtensionBundle.swift in Sources */,
 				C0D26E862C262A63005631E9 /* HapticFeedback.swift in Sources */,
 				C0D26E742C26225B005631E9 /* Bin2DecWidgetExtension.swift in Sources */,

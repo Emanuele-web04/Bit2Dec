@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Bit2DecApp: App {
+    @StateObject private var store = TipStore()
+
     var body: some Scene {
         WindowGroup {
             MainView()
+                .preferredColorScheme(.dark)
+                .environmentObject(store)
         }
     }
 }

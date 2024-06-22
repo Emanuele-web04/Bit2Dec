@@ -1,0 +1,111 @@
+{
+  "identifier" : "A3388D31",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.49",
+      "familyShareable" : false,
+      "internalID" : "2203822F",
+      "localizations" : [
+        {
+          "description" : "Boost my focus for a small amount of time ☕️",
+          "displayName" : "Buy me a small coffee",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.emanueledipietro.Bit2Dec.TinyTip",
+      "referenceName" : "TinyTip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "EE809479",
+      "localizations" : [
+        {
+          "description" : "I already feel the energy",
+          "displayName" : "Buy me a regular coffee",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.emanueledipietro.com.SmallTip",
+      "referenceName" : "SmallTip",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "1.49",
+      "familyShareable" : false,
+      "internalID" : "448EB0C1",
+      "localizations" : [
+        {
+          "description" : "I'm going to get so much work done!!",
+          "displayName" : "Buy me a premium coffee",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.emanueledipietro.com.NormalTip",
+      "referenceName" : "NormalTip",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_storefront" : "ITA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}
