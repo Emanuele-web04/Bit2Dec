@@ -9,7 +9,6 @@
 import UIKit
 
 class HapticFeedback {
-    
     static let shared = HapticFeedback()
     
     func triggerImpactFeedback(_ style: UIImpactFeedbackGenerator.FeedbackStyle = .medium) {
